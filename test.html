@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subsection {
+            color: blue;
+        }
+
+        /* rule 1 */
+        #subsection {
+            background-color: yellow;
+            color: blue;
+        }
+
+        /* rule 2 */
+        .main #subsection {
+            color: red;
+        }
+    </style>
+    <!-- <link href="style.css"> -->
+</head>
+
+<body>
+    <!-- index.html -->
+
+    <div class="main">
+        <div class="list" id="subsection">Red text on yellow background</div>
+    </div>
+
+</body>
+
+</html>
