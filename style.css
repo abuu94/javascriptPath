@@ -1,7 +1,65 @@
-.subsection {
+/* .subsection {
     color: blue;
 }
 
 .main .list {
     color: red;
+} */
+
+* {
+    color: rgb(70, 128, 0);
+}
+
+body {
+    background-color: rgb(211, 93, 93);
+}
+
+/* styles.css */
+
+div {
+    color: white;
+}
+
+/* styles.css */
+
+.alert-text {
+    color: rgb(102, 0, 255);
+}
+
+/* styles.css */
+
+#title {
+    background-color: rgb(23, 20, 20);
+}
+
+.read,
+.unread {
+    color: white;
+    background-color: black;
+}
+
+.read {
+    /* several unique declarations */
+}
+
+.unread {
+    /* several unique declarations */
+}
+
+.subsection.header {
+    color: red;
+}
+
+.subsection.header {
+    color: red;
+}
+
+.subsection#preview {
+    color: blue;
+}
+
+/* styles.css */
+
+.ancestor .contents {
+    /* some declarations */
 }

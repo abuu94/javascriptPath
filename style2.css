@@ -1,0 +1,31 @@
+/*  
+Color and background-color
+Typography basics and text-align
+
+
+*/
+p {
+    /* hex example: */
+    color: #1100ff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+.alert-text {
+    color: rgb(102, 0, 255);
+}
+
+img {
+    height: auto;
+    width: 500px;
+}
+
+/* styles.css */
+
+div {
+    color: white;
+    background-color: black;
+}
