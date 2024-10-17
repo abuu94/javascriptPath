@@ -1,0 +1,112 @@
+<!-- 
+ https://css-tricks.com/snippets/css/complete-guide-grid/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth Example of Grid </title>
+</head>
+
+<style>
+    .box1 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        background-color: darkolivegreen;
+
+    }
+
+    .box2 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 18;
+        background-color: rgb(62, 13, 134);
+    }
+
+    .box3 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        background-color: rgb(124, 26, 237);
+    }
+
+    .box4 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 18;
+        background-color: rgb(242, 20, 223);
+    }
+
+    .box5 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 18;
+        grid-row-end: 22;
+        background-color: rgb(76, 84, 63);
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 100px);
+        gap: 10px;
+
+        text-align: center;
+    }
+
+    .item {
+
+        border: 1px solid black;
+        text-align: center;
+
+        border-radius: 25px;
+        color: rgb(245, 240, 240);
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="box1 item">Header</div>
+        <div class="box2 item">Sidebar</div>
+        <div class="box3 item">Nav</div>
+        <div class="box4 item">Article
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+
+            </p>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+            </p>
+            <p>
+
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."
+            </p>
+        </div>
+        <div class="box5 item">Footer</div>
+    </div>
+
+</body>
+
+</html>
