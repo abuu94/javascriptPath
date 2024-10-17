@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="number">Enter number: </label>
+    <input id="number" type="number" />
+    <button>Generate integer squares</button>
+
+    <p>Output:</p>
+
+    <script>
+        const para = document.querySelector("p");
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            para.textContent = "Output: ";
+            const num = input.value;
+            input.value = "";
+            input.focus();
+            for (let i = 1; i <= num; i++) {
+                let sqRoot = Math.sqrt(i);
+                if (Math.floor(sqRoot) !== sqRoot) {
+                    continue;
+                }
+                para.textContent += `${i} `;
+            }
+        });
+
+        //anotherExample
+        const cats = ["Pete", "Biggles", "Jasmine"];
+
+        let myFavoriteCats = "My cats are called ";
+
+        let i = 0;
+
+        while (i < cats.length) {
+            if (i === cats.length - 1) {
+                myFavoriteCats += `and ${cats[i]}.`;
+            } else {
+                myFavoriteCats += `${cats[i]}, `;
+            }
+
+            i++;
+        }
+
+        console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+
+        // Another
+        const cats1 = ["Pete", "Biggles", "Jasmine"];
+
+        let myFavoriteCats1 = "My cats are called ";
+
+        let j = 0;
+
+        do {
+            if (j === cats1.length - 1) {
+                myFavoriteCats1 += `and ${cats1[j]}.`;
+            } else {
+                myFavoriteCats1 += `${cats[j]}, `;
+            }
+
+            j++;
+        } while (j < cats1.length);
+
+        console.log(myFavoriteCats1); // "My cats are called Pete, Biggles, and Jasmine."
+
+
+
+    </script>
+</body>
+
+</html>

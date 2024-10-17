@@ -1,0 +1,46 @@
+/* @font-face {
+    font-family: Norse;
+    font-weight: bold;
+    src: url('Norse-Bold.otf');
+}
+
+p {
+    font-family: Norse;
+    font-size: larger;
+}
+
+
+table {
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+
+} */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: bisque;
+}
+
+td {
+    border: 1px solid black;
+    width: 50%;
+    /* height: 100%; */
+}
+
+.inline-block-child {
+    flex: 1;
+    align-items: center;
+}
+
+.parent {
+    display: flex;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" media="screen" href="Norse-Bold.otf" type="text/css" />
+
+    <link rel="stylesheet" href="11_signUpFormAssignment.css" />
+    <style>
+        @font-face {
+            font-family: Norse;
+            font-weight: bold;
+            src: url('Norse-Bold.otf');
+        }
+
+        p {
+            font-family: Norse;
+            font-size: larger;
+        }
+
+        .button1 {
+
+            font-size: 24px;
+            padding: 16px;
+            border-radius: 12px;
+
+        }
+    </style>
+
+    <script>
+        // function validateForm() {
+        //     let fname = document.forms["userForm"]["first_name"].value;
+        //     let lname = document.forms["userForm"]["last_name"].value;
+        //     let email = document.forms["userForm"]["email"].value;
+        //     let phone = document.forms["userForm"]["phone_number"].value;
+        //     let password = document.forms["userForm"]["user_password"].value;
+        //     let confirm_password = document.forms["userForm"]["confirm_user_password"].value;
+
+        //     if (fname == '') {
+        //         //alert("You must be fill all field.");
+        //         document.getElementById('fname').style.color = 'Red'.value = "Enter Firstname";
+        //         return false;
+        //     }
+        // }
+    </script>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-child purple">
+            <div class="card-container">
+                <img class=" card-image" src="11_signUpFormAssignment.jpg">
+                <!-- <h1>EGAZ</h1> -->
+                <div class="card-body">
+                    <p id="arrange">
+                        <img id='Image' src="11_signUpFormAssignmentLogo.png" />
+                        EGAZ
+                    </p>
+                </div>
+                <!-- Powered by Norse -->
+            </div>
+        </div>
+        <div class="grid-child green">
+            <h1> This is not a read online service! <br> You know you need something like thhis in your life
+                to help you realize your deepet dreams.<br>
+                Sign up now to get started.
+            </h1>
+
+            <h1>You <i>know</i> you want to.</h1>
+
+            <hr>
+
+            let's do this <!--method="post"    action="https://httpbin.org/post"-->
+            <br><br>
+
+            <!-- <form id="userForm" onsubmit="return validateForm()">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname">
+                <input type="submit" value="Submit">
+                <p id="error-jina" style="color:red;"></p>
+            </form> -->
+            <!--
+             <form name="userForm" onsubmit="return validateForm()">
+                <div class="user_form">
+
+                    <div class="grid-container">
+                        <div class="grid-child purple">
+                            <div>
+                                <label for="first_name">FIRST NAME</label>
+                                <input type="text" id="first_name">
+                                <p id="error-jina" style="color:red;"></p>
+                            </div>
+                            <div>
+                                <label for="user_email">EMAIL</label>
+                                <input type="email" id="user_email" name="email" placeholder="you@example.com">
+                                <p id="error-email" style="color:red;"></p>
+                            </div>
+                            <div>
+                                <label for="user_password">PASSWORD</label>
+                                <input type="password" id="user_password" name="password">
+                                <p id="error-pwd" style="color:red;"></p>
+                            </div>
+                        </div>
+                        <div class="grid-child green">
+                            <div>
+                                <label for="last_name">LAST NAME</label>
+                                <input type="text" name="last_name" id="last_name">
+                                <p id="error-lname" style="color:red;"></p>
+                            </div>
+                            <div>
+                                <label for="age">PHONE MUMBER</label>
+                                <input type="number" name="phone_number" id="age">
+                                <p id="error-phonenumber" style="color:red;"></p>
+                            </div>
+                            <div>
+                                <label for="confirm_user_password">CONFIRM PASSWORD</label>
+                                <input type="password" id="confirm_user_password" name="confirm_user_password">
+                                <p id="error-conf-pwd" style="color:red;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+
+
+                </div>
+            </form>
+            
+            -->
+
+
+            <h1 class="greeting"> Already have an account? Log in</h1>
+        </div>
+    </div>
+</body>
+
+<script>
+    function validateForm() {
+        var fname = document.getElementById("fname").value;
+        if (fname == "") {
+            document.getElementById("error-jina").innerText = "First name must be filled out.";
+            return false;
+        }
+        return true;
+    } 
+</script>
+
+</html>

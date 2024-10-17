@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> Function</h1>
+    <canvas width="1000" height="1000">
+        An alternative text describing what your canvas displays.
+    </canvas>
+
+
+    <script>
+        const myText = "I am a string";
+        const newString = myText.replace("string", "sausage");
+        console.log(myText);
+        console.log(newString);
+        // the replace() string function takes a source string,
+        // and a target string and replaces the source string,
+        // with the target string, and returns the newly formed string
+        const myAddress = ["Mchangamrima", "Ole", "Pemba", "Zanzibar"];
+        const madeAString = myAddress.join(" ");
+        console.log(madeAString);
+        // the join() function takes an array, joins
+        // all the array items together into a single
+        // string, and returns this new string
+        const ControlNumber = Math.random(0, 9);
+        console.log('Your Control Number: ' + ControlNumber);
+        // the random() function generates a random number between
+        // 0 and up to but not including 1, and returns that number
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+        function draw() {
+            const WIDTH = 2000;
+            const HEIGHT = 2000;
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+            for (let i = 0; i < 100; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(255 0 0 / 50%)";
+                ctx.arc(Math.random(WIDTH), Math.random(HEIGHT), Math.random(50), 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+
+        draw();
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+
+        // function myFunction() {
+        //     alert("hello");
+        // }
+
+        // myFunction();
+        // calls the function once
+        const myArray = ["I", "love", "chocolate", "frogs"];
+        const maeAString = myArray.join(" ");
+        console.log(maeAString);
+        // returns 'I love chocolate frogs'
+
+        const madeAnotherString = myArray.join();
+        console.log(madeAnotherString);
+        // returns 'I,love,chocolate,frogs'
+
+        function hello(name = "Chris") {
+            console.log(`Hello ${name}!`);
+        }
+
+        hello("Ari"); // Hello Ari!
+        hello(); // Hello Chris!
+
+        // function myFunction() {
+        //     alert("hello");
+        // }
+
+        (function () {
+            alert("hello anonymous");
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

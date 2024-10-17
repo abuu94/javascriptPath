@@ -1,0 +1,57 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+
+}
+
+.card-container {
+    position: relative;
+    width: 100%
+}
+
+.card-image {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card-body {
+    position: absolute;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+    color: white;
+    top: 8rem;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: roboto;
+}
+
+#Image {
+    width: 80px;
+    height: 120px;
+
+}
+
+#arrange {
+    display: inline-block;
+    font-size: 80PX;
+}
+
+.card-heading {
+    position: absolute;
+}
+
+/* style za upande weye fomu*/
+
+.user_form {
+    width: 500px;
+    clear: both;
+}
+
+.user_form input {
+    width: 100%;
+    clear: both;
+}

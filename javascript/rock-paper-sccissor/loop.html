@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<h1>Looping through a collection</h1>
+<!-- <p id="demo1"> Calculating Squares</p>
+
+
+<button id="calculate">Calculating</button>
+<button id="clear">Clear</button>
+
+<pre id="results"></pre> -->
+
+<!-- <p id="demo2"> Search Conatcts</p> -->
+<label for="search">Search by contact name: </label>
+
+<input id="search" type="text" />
+<button>Search</button>
+
+<p></p>
+
+<!-- <p id="demo3"></p> -->
+
+
+
+<script>
+    const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+    for (const cat of cats) {
+        //document.getElementById('demo1').innerHTML = cat.toString();
+        console.log(cat);
+    }
+
+    //map() and filter()
+    function toUpper(string) {
+        return string.toUpperCase();
+    }
+
+    const paka = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+    const upperCats = paka.map(toUpper);
+
+    console.log(upperCats);
+    // [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+
+    //filter()
+    function lCat(cat) {
+        return cat.startsWith("L");
+    }
+
+    const wanyama = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+    const filtered = wanyama.filter(lCat);
+
+    console.log(filtered);
+    // [ "Leopard", "Lion" ]
+
+    const cats1 = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+    const filtered1 = cats1.filter((cat) => cat.startsWith("L"));
+    console.log(filtered1);
+    // [ "Leopard", "Lion" ]
+
+
+    //calculation squares
+    // const results = document.querySelector("#results");
+
+    // function calculate() {
+    //     for (let i = 1; i < 10; i++) {
+    //         const newResult = `${i} x ${i} = ${i * i}`;
+    //         results.textContent += `${newResult}\n`;
+    //     }
+    //     results.textContent += "\nFinished!\n\n";
+    // }
+
+    // const calculateBtn = document.querySelector("#calculate");
+    // const clearBtn = document.querySelector("#clear");
+
+    // calculateBtn.addEventListener("click", calculate);
+    // clearBtn.addEventListener("click", () => (results.textContent = ""));
+
+    //for loops
+    const cats2 = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+    for (const cat of cats2) {
+        console.log(cat);
+    }
+    const cats3 = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+    for (let i = 0; i < cats3.length; i++) {
+        console.log(cats[i]);
+    }
+
+    const cats4 = ["Pete", "Biggles", "Jasmine"];
+
+    let myFavoriteCats = "My cats are called ";
+
+    for (const cat of cats4) {
+        myFavoriteCats += `${cat}, `;
+    }
+
+    console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
+
+    const cats5 = ["Pete", "Biggles", "Jasmine"];
+
+    let myFavoriteCats5 = "My cats are called ";
+
+    for (let i = 0; i < cats5.length; i++) {
+        if (i === cats5.length - 1) {
+            // We are at the end of the array
+            myFavoriteCats5 += `and ${cats5[i]}.`;
+        } else {
+            myFavoriteCats5 += `${cats5[i]}, `;
+        }
+    }
+
+    console.log(myFavoriteCats5); // "My cats are called Pete, Biggles, and Jasmine."
+
+    //Exiting loops with break with Search Contacts
+    const contacts = [
+        "Ali:2232322",
+        "Edi-Muma:3453456",
+        "Thabi:7654322",
+        "Kake:9998769",
+        "Rashid:9384975",
+    ];
+    const para = document.querySelector("p");
+    const input = document.querySelector("input");
+    const btn = document.querySelector("button");
+
+    btn.addEventListener("click", () => {
+        const searchName = input.value.toLowerCase();
+        input.value = "";
+        input.focus();
+        para.textContent = "";
+        for (const contact of contacts) {
+            const splitContact = contact.split(":");
+            if (splitContact[0].toLowerCase() === searchName) {
+                para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+                break;
+            }
+        }
+        if (para.textContent === "") {
+            para.textContent = "Contact not found.";
+        }
+    });
+
+
+
+
+
+
+
+</script>
+
+<body>
+
+
+
+
+
+</body>
+
+</html>

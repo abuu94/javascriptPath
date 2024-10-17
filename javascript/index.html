@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <!-- <link type="text/javascript" href="javascript.js"> -->
+    <script defer src="javascript.js"></script>
+</head>
+
+<body>
+    <button onclick="createParagraph()">Click me!</button>
+
+    <script>
+        function createParagraph() {
+            const para = document.createElement("p");
+            para.textContent = "You clicked the button!";
+            document.body.appendChild(para);
+        }
+    </script>
+    <!-- <H1>commosava</H1>
+    <button>Start machine</button>
+    <p>The machine is stopped.</p> -->
+
+    <!-- <script>
+
+        let c = prompt("First number?", +1);
+        let d = prompt("Second number?", +2);
+
+        alert(c + d); // 12
+
+        const btn = document.querySelector("button");
+        const txt = document.querySelector('p');
+
+        btn.addEventListener('click', updateBtn);
+
+        function updateBtn() {
+            if (btn.textContent === 'Start machine') {
+                btn.textContent = 'Stop machine';
+                txt.textContent = "The machine has started";
+
+            } else {
+                btn.textContent = 'Start machine';
+                txt.textContent = 'The machine is stopped';
+            }
+        }
+
+
+
+
+
+
+
+        let a = 10;
+        console.log(9 * a);
+
+        let b = 7 * a;
+        console.log(b)
+
+        let max = 57;
+        let actual = max - 13
+        var percentage = actual / max
+        console.log(percentage)
+
+        // console.log("kARIBU eGAZ")
+        let name = "John";
+        let surname = "Doe";
+
+        console.log(name);
+        console.log(surname);
+
+        let age = 11;
+        console.log(age); // outputs 11 to the console
+
+        age = 54;
+
+        console.log(age); // what will be output now?
+        const pi = 3.14;
+        // pi = 10;
+
+        console.log(pi); // What will be output?
+
+        console.log(23 + 97)
+        console.log((4 + 6 + 9) / 77)
+
+        // let x = 10;
+        // let y = 20;
+        // let z = 'The result is: ' + x + y;
+        // alert(z);
+
+        // let m = "100";
+        // let n = "10";
+        // let o = m / n;
+        // console.log(o) //it works
+
+        // let m = "100";
+        // let n = "10";
+        // let o = x / y;
+        // let myNumber = 2;
+        // // Execute until Infinity
+        // while (myNumber != Infinity) {
+        //     console.log(myNumber)
+        //     myNumber = myNumber * myNumber;
+
+        // }
+
+
+
+
+    </script> -->
+
+
+</body>
+
+</html>

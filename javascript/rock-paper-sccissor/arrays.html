@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"> </script>
+    <style rel="stylesheet" type="text/css">
+        h1 {
+
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Arrays and Loops Foundations Course</h1>
+    <ol>
+        <li>Kusini Unguja</li>
+        <li>Kusini Pemba</li>
+        <li>Kaskazini Unguja</li>
+        <li>Kaskazini Pemba</li>
+        <li>Mjini Magharibi</li>
+    </ol>
+
+    <br />
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <p id="demo4"></p>
+
+    <p id="demo5"></p>
+
+    <p id="demo6"></p>
+
+    <p id="demo7"></p>
+
+    <p id="demo8"></p>
+
+    <p id="demo9"></p>
+
+    <p id="demo10"></p>
+
+    <h1> Array Methods</h1>
+
+    <p id="demo11"></p>
+
+    <p id="demo12"></p>
+
+    <p id="demo13"></p>
+
+    <p id="demo14"></p>
+
+    <p id="demo15"></p>
+
+    <p id="demo16"></p>
+
+
+    <script>
+        const nchi = ["Tanzania", "Kenya", "Uganda", "Malawi"];
+        document.getElementById("demo1").innerHTML = nchi.toString();
+        document.getElementById("demo2").innerHTML = nchi;
+
+        //Locations Sehemu,Mkoa, Cordinates
+        const address = ['Tunguu', 'Kusini', '-6.413000', '39.552399']
+        document.getElementById("demo3").innerHTML = address;
+        //  [-5.725900,39.298599][-6.270321,39.426361][-5.971285,39.304825]
+        const area = { sehemu: "Tunguu", mkoa: "Kusini", lat: -6.413000, long: 39.552399 };
+        document.getElementById("demo4").innerHTML = area.toString();
+        // Differents elements types
+
+        const cars = ["Saab", "Volvo", "BMW"];
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits[fruits.length] = "Lemon";  // Adds "Lemon" to fruits
+
+        let fruit = fruits[fruits.length - 1];
+
+        function api(zanid) {
+            return zanid
+
+        }
+
+        let myArray = [];
+
+        myArray[0] = 'Tarehe      :' + Date.now();
+        myArray[1] = api('Zan_Id  :' + 656566);
+        myArray[2] = 'Address     :' + address;
+        myArray[3] = 'Status      :   Married';
+        myArray[4] = ' No of Cars :' + cars.length
+        myArray[5] = 'Food :' + fruits
+        myArray[6] = 'Likes       :' + fruit
+        myArray.push('Developer')
+
+
+        myArrayLen = myArray.length;
+
+        document.getElementById("demo5").innerHTML = myArray.toString();
+
+        //looping array elements
+        let text = "<ul>";
+        for (let i = 0; i < myArrayLen; i++) {
+            text += "<li>" + myArray[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo6").innerHTML = text.toString();
+
+        //lloping foreach
+
+        let text1 = "<ul>";
+        myArray.forEach(myFunction);
+        text += "</ul>";
+
+        function myFunction(value) {
+
+            text1 += "<li>" + value + "</li>";
+
+        }
+
+        document.getElementById("demo7").innerHTML = text1.toString();
+
+        let type = typeof fruits;
+        console.log(type);
+        console.log(Array.isArray(fruits));
+        console.log((fruits instanceof Array));
+
+
+        // Nested Arrays and Objects
+        const itOfficcer = {
+            name: "John",
+            age: 30,
+            skill: [
+                { chuo: "Suza", kozi: ["Coding", "Database", "Drawing"], status: 'Complete', year: 2020 },
+                { chuo: "MIT", kozi: ["Algorithmd", "Web3", "AI"], status: 'Complete', year: 2021 },
+                { chuo: "OXford", kozi: ["ML", "DS"], status: 'Complete', year: 2022 },
+                { chuo: "UDSM", kozi: ["Arabic", "English"], status: 'InComplete', year: 2023 }
+            ]
+        }
+        let x;
+        for (let i in itOfficcer.skill) {
+            x += "<h1>" + itOfficcer.skill[i].chuo + "</h1>";
+            for (let j in itOfficcer.skill[i].kozi) {
+                x += itOfficcer.skill[i].kozi[j];
+            }
+        }
+        document.getElementById("demo8").innerHTML = x.toString();
+        console.log('it officer v1')
+        //Marekebisho
+
+        document.getElementById('demo9').innerHTML = 'tupo hapa';
+
+        //
+        let y;
+
+        for (let i in itOfficcer.skill) {
+            y += "<h1>" + itOfficcer.skill[i].chuo + "</h1>";
+            for (let j in itOfficcer.skill[i].kozi) {
+                y += "<br>" + itOfficcer.skill[i].kozi[j];
+            }
+        }
+
+        document.getElementById("demo10").innerHTML = y;
+        console.log(y)
+
+        //Array methods
+        const matunda = ["Banana", "Orange", "Apple", "Mango"];
+        let size = matunda.length;
+        console.log('Array method will be used frequently do rush or skip');
+        document.getElementById('demo11').innerHTML = size;
+        console.log(size);
+        console.log(matunda);
+        let f = matunda.at(2);
+        console.log(f);
+        let r = matunda[2];
+        console.log(r);
+
+        document.getElementById("demo12").innerHTML = matunda.join(" * ");
+        matunda.push();
+        matunda.push('Tikiti');
+        matunda.shift();
+        matunda.unshift("Lemon");
+        matunda[matunda.length] = "Kiwi";
+        //matunda.delete(); delete matunda[0]
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+
+        const myChildren1 = myGirls.concat(myBoys);
+        const arr1 = ["Cecilie", "Lone"];
+        const arr2 = ["Emil", "Tobias", "Linus"];
+        const arr3 = ["Robin", "Morgan"];
+        const myChildren2 = arr1.concat(arr2, arr3);
+
+        //flattering
+        const myArr = [1, 2, 3, 4, 5, 6];
+        const newArr = myArr.flatMap(x => [x, x * 10]);
+        console.log('Flattering')
+        console.log(newArr);
+
+
+
+
+
+
+
+
+        // tena
+
+    </script>
+</body>
+
+
+</html>

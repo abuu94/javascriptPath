@@ -1,0 +1,16 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    height: 100%;
+
+
+}
+
+.grid-child.purple {
+    background-color: bisque;
+}
+
+.grid-child.green {
+    background-color: antiquewhite;
+}
