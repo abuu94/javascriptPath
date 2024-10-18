@@ -1,0 +1,3 @@
+-DOM
+-use OOP principles, 
+-fetch real-world data using APIs.
