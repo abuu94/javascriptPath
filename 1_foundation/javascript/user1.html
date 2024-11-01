@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    First Name: <input type="text" id="firstname">
+    <p id="demo1"></p>
+    <hr>
+    Middle Name: <input type="text" id="middlename">
+    <p id="demo2"></p>
+    <hr>
+    Last Name: <input type="text" id="lastname">
+    <p id="demo3"></p>
+
+    <p>Click the button to display the value of the value attribute of the text field.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo4"></p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        function myFunction() {
+            var firstname = document.getElementById("firstname").value;
+            var middlename = document.getElementById("middlename").value;
+            var lastname = document.getElementById("lastname").value;
+            if (firstname == "") {
+                document.getElementById("demo1").innerHTML = 'Enter First Name';
+            } else if (middlename == "") {
+                document.getElementById("demo2").innerHTML = 'Enter Middle Name';
+            } else if (lastname == "") {
+                document.getElementById("demo3").innerHTML = 'Enter Last Name';
+            } else {
+                $('#demo1').hide();
+                $('#demo2').hide();
+                $('#demo3').hide();
+                // document.getElementById("demo1").hidden;
+                // document.getElementById("demo2").hidden;
+                // document.getElementById("demo3").hidden;
+
+                document.getElementById("demo4").innerHTML = 'You have succefull filled all fields';
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

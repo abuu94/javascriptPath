@@ -4,8 +4,8 @@ function createParagraph() {
     document.body.appendChild(para);
 }
 
-const buttons = document.querySelectorAll("button");
+// const buttons = document.querySelectorAll("button");
 
-for (const button of buttons) {
-    button.addEventListener("click", createParagraph);
-}
+// for (const button of buttons) {
+//     button.addEventListener("click", createParagraph);
+// }

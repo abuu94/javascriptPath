@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MY PROJECT</h1>
+
+    <h1>My Library : Book Information</h1>
+    <p id="demo"></p>
+
+    <hr>
+
+    <script>
+        const person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        // Display Properties
+        document.getElementById("demo").innerHTML =
+            person.name + "," + person.age + "," + person.city;
+    </script>
+
+    <h1>My Library : Book Information</h1>
+    <p id="demo2"></p>
+
+    <hr>
+
+
+    <script>
+        // Create an Object
+        const person2 = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        // Build a Text
+        let text = "";
+        for (let x in person2) {
+            text += person2[x] + " ";
+        };
+
+        // Display the Text
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+
+    <h1>My Library 3: Book Information</h1>
+    <p id="demo3"></p>
+
+    <script>
+        // Create an Object
+        const person3 = {
+            name: "Abuu",
+            age: 30,
+            city: "Tanzania"
+        };
+
+        // Create an Array
+        const myArray = Object.values(person3);
+
+        // Display the Array
+        document.getElementById("demo3").innerHTML = myArray;
+    </script>
+
+    <hr>
+    <h1>Banana 4: Banana Information</h1>
+    <p id="demo4"></p>
+
+    <script>
+        const fruits = { Bananas: 300, Oranges: 200, Apples: 500 };
+
+        let text1 = "";
+        for (let [fruit, value] of Object.entries(fruits)) {
+            text1 += fruit + ": " + value + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text1;
+    </script>
+    <hr>
+    <h1>JSON 5: Person Information</h1>
+    <p id="demo5"></p>
+
+    <script>
+        const fruits1 = { Bananas: 300, Oranges: 200, Apples: 500 };
+
+        let text2 = "";
+        for (let [fruit, value] of Object.entries(fruits1)) {
+            text2 += fruit + ": " + value + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = text2;
+    </script>
+
+</body>
+
+</html>

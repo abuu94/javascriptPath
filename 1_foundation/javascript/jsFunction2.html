@@ -48,9 +48,11 @@
         }
 
         draw();
+
         function random(number) {
-            return Math.floor(Math.random() * number);
+            return Math.floor(Math.random(0, 9999) * number);
         }
+        console.log(random(99999));
 
         // function myFunction() {
         //     alert("hello");

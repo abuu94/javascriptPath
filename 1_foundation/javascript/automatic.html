@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Automatic Form Display</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>  
+
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>  
+
+
+    <script>
+        // Automatically display the form when the page loads
+        window.onload = function () {
+            document.getElementById("myForm").style.display = "block";
+        };
+    </script>
+</body>
+
+</html>

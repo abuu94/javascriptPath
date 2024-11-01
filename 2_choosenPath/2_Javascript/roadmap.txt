@@ -1,3 +1,34 @@
 -DOM
 -use OOP principles, 
 -fetch real-world data using APIs.
+
+Road:
+-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+-https://learnxinyminutes.com/docs/javascript/
+-https://jquery.com/
+
+Mke:
+Kujali Hisia zake, akifoka mpe nafasi na mipaka.
+Muitikie sawa , Usimkarashi.
+Muepusha na wasiwasi, muweke wazi.
+Mtimizie mahitaji ya kiroho na kimwili.
+Akiumwa mletee vitu anavyohitaji.
+
+Heshima.
+Usiwe  mbabe.
+Usimshuku.
+Kupekua simu zake.
+Mume akikosa kazi , jishughulishe na uwe upande wake.
+
+Matatizo ya Mme:
+Tamaa ya kuonja nje.
+Kumpuuza mke.
+
+Utiifu wa Mke:
+-Kaa Behind za scene kwa mume.
+-Usitoke nje bbila ruhusa.
+-Usiwe mtovu wa adabu.
+-Kuongea na mumeo kama mtu mwengine.
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="formContainer"></div>
+
+    <script>
+        function createForms(numForms) {
+            const formContainer = document.getElementById('formContainer');
+            formContainer.innerHTML = ''; // Clear any existing forms
+
+            for (let i = 0; i < numForms; i++) {
+                const form = document.createElement('form');
+                form.innerHTML = `
+      <label for="name${i}">Name:</label>
+      <input type="text" id="name${i}" name="name${i}">
+      <br>
+      <label for="email${i}">Email:</label>
+      <input type="email" id="email${i}" name="email${i}">
+      <br><br>
+    `;
+                formContainer.appendChild(form);
+            }
+        }
+
+        // Example usage:
+        createForms(3); // Create 3 forms
+    </script>
+
+</body>
+
+</html>

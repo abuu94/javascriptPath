@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <h1> Sehemu ya Kwanza bila form Tag</h1>
+    First Name: <input type="text" id="fname"> <br />
+    Middle Name: <input type="text" id="mname"> <br />
+    Last Name: <input type="text" id="lname"> <br />
+    <p>Click the button to display the value of the value attribute of the text field.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var fname = document.getElementById("fname").value;
+            var mname = document.getElementById("mname").value;
+            var lname = document.getElementById("lname").value;
+            document.getElementById("demo").innerHTML = fname + ' ' + mname + ' ' + lname;
+        }
+    </script>
+
+    <hr>
+    <h1> Sehemu ya Pili, pamoja na form Tag</h1>
+    <form method="GET" action="###">
+        <p id="id"></p>
+        <p id="emplyeeId"></p>
+        <label>Firstname </label>
+        <input type="text" id="firstname"><br>
+        <label>Middlename</label>
+        <input type="text" id="middlename"><br>
+        <label>Lastname</label>
+        <input type="text" id="lastname">
+        <br>
+        <label>Your Unique ID </label>
+        <input type="text" name="id">
+        <br>
+        <button onclick="display()"> Submit</button>
+    </form>
+    <!-- <p id="demo"></p> -->
+    <script>
+        //Niifanye User aingize value mwenyewe kisha
+        // nizioneshe ktk console.log
+        //nizipeleke ktk db
+        //nizioneshe ktk fommu ya user
+        // user akiingiza aone maandiko
+        //yanajiandika kwa chini
+        // const myName = ["Ali", "Juma", "Hamad"];
+        // const madeAString = myName.join(" ");
+        // console.log(madeAString);
+        // const ControlNumber = Math.random(0, 4);
+        // console.log('Your Control Number: ' + ControlNumber);
+        // const box = document.createElement('p');
+        // const box1 = document.getElementById('id');
+        // box.textContent = 'Your Control Number: ' + ControlNumber;
+        // box1.textContent = 'User No :' + ControlNumber;
+        // document.body.append(box);
+        // function random(number) {
+        //     return Math.floor(Math.random(0, 9999) * number);
+        // }
+        // const box2 = document.getElementById('emplyeeId');
+        // box2.textContent = 'Employee Id: ' + random(99999);
+        // console.log(random(99999));
+        //user inputs.
+        function display() {
+            const myName = ["Ali", "Juma", "Hamad"];
+            const madeAString = myName.join(" ");
+            console.log(madeAString);
+            const ControlNumber = Math.random(0, 4);
+            console.log('Your Control Number: ' + ControlNumber);
+            const box = document.createElement('p');
+            const box1 = document.createElement('p');
+            //const box1 = document.getElementById('id');
+            box.textContent = 'Your Control Number: ' + ControlNumber;
+            box1.textContent = 'User No :' + ControlNumber;
+            document.body.append(box);
+            document.body.append(box1);
+
+            const firstname = document.getElementById('firstname').value;
+            const middlename = document.getElementById('middlename').value;
+            const lastname = document.getElementById('lastname').value;
+            document.getElementById('id').innerHTML = firstname + ' ' + middlename + ' ' + lastname;
+
+        }
+
+        // function display() {
+        //     var fname = document.getElementsById("test").value;
+        //     document.getElementById("test1").innerHTML = fname;
+        // }
+    </script>
+    <hr>
+    <h1> Sehemu ya Tatu, namw za kiswahili</h1>
+    <form method="GET" action="###">
+        <p id="userAccount"></p>
+        <p id="userId"></p>
+        <p id="jinakamili"></p>
+        <label>Firstname </label>
+        <input type="text" id="jinalakwanza"><br>
+        <label>Middlename</label>
+        <input type="text" id="jinalapili"><br>
+        <label>Lastname</label>
+        <input type="text" id="jinalatatu">
+
+        <br>
+        <label>Your Unique ID </label>
+        <input type="text" name="id">
+        <br>
+        <button onclick="onesha()"> Wasilisha</button>
+    </form>
+    <!-- <p id="demo"></p> -->
+    <script>
+
+
+        //user inputs.
+        function onesha() {
+
+            const CNo = Math.floor(Math.random() * (99999 - 11111 + 1)) + 11111;
+            const empId = Math.floor(Math.random() * (999 - 111)) + 111;
+            console.log('Your Control Number: ' + CNo);
+
+            const box = document.getElementById('userId');
+            const box1 = document.getElementById('userAccount');
+
+            box.innerText = CNo;
+            box1.innerText = empId;
+
+            const jinalakwanza = document.getElementById('jinalakwanza').value;
+            const jinalapili = document.getElementById('jinalapili').value;
+            const jinalatatu = document.getElementById('jinalatatu').value;
+            document.getElementById('jinakamili').innerHTML = jinalakwanza + ' ' + jinalapili + ' ' + jinalatatu;
+
+
+        }
+    </script>
+    <hr>
+    <!-- <h1> Sehemu ya Tatu, pamoja na form Tag</h1> -->
+</body>
+
+</html>

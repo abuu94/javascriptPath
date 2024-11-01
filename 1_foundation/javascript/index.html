@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
     <!-- <link type="text/javascript" href="javascript.js"> -->
-    <script defer src="javascript.js"></script>
+    <!-- <script defer src="javascript.js"></script> -->
 </head>
 
 <body>
-    <button onclick="createParagraph()">Click me!</button>
+    <!-- <button onclick="createParagraph()">Click me!</button> -->
+
+    <button onclick="display()"> Bonyeza</button>
 
     <script>
-        function createParagraph() {
-            const para = document.createElement("p");
-            para.textContent = "You clicked the button!";
-            document.body.appendChild(para);
+        // function createParagraph() {
+        //     const para = document.createElement("p");
+        //     para.textContent = "You clicked the button!";
+        //     document.body.appendChild(para);
+        // }
+        function display() {
+            const box = document.createElement('h1');
+            box.textContent = 'Computer Science';
+            document.body.append(box);
         }
+
+
+
+
     </script>
     <!-- <H1>commosava</H1>
     <button>Start machine</button>

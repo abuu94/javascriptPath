@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Input Display</title>
+</head>
+
+<body>
+    <input type="text" id="userInput" placeholder="Enter your text here">
+    <button onclick="displayInput()">Submit</button>
+    <p id="displayArea"></p>
+
+    <script>
+        function displayInput() {
+            // Get the user input from the text box
+            const userInput = document.getElementById("userInput").value;
+
+            // Display the input in the paragraph element
+            document.getElementById("displayArea").textContent = userInput;
+        }
+    </script>
+</body>
+
+</html>

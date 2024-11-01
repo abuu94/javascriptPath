@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+</head>
+
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        // Function to create a table and output to the webpage
+        function createTable() {
+            // Sample data for the table
+            const data = [
+                ['Name', 'Age', 'City'],
+                ['Alice', 25, 'New York'],
+                ['Bob', 30, 'San Francisco'],
+                ['Charlie', 35, 'Los Angeles']
+            ];
+
+            // Create a table element
+            const table = document.createElement('table');
+            table.border = '1';
+
+            // Loop through the data and create rows and cells
+            for (let i = 0; i < data.length; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j < data[i].length; j++) {
+                    const cell = i === 0 ? document.createElement('th') : document.createElement('td');
+                    const cellText = document.createTextNode(data[i][j]);
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+
+            // Append the table to the container div
+            document.getElementById('table-container').appendChild(table);
+        }
+
+        // Call the function to create and display the table
+        createTable();
+
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
